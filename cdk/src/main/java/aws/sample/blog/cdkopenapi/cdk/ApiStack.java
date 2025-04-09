@@ -204,7 +204,8 @@ public class ApiStack extends Stack {
 				.bucketName(PhysicalName.GENERATE_IF_NEEDED)
 				.versioned(true)
 				.encryption(BucketEncryption.UNENCRYPTED)
-				.autoDeleteObjects(true)
+				//.autoDeleteObjects(true) // this will create custom code to delete files but uses older version 
+				.autoDeleteObjects(false)  // Set to false to disable auto-deletion. 
 				.removalPolicy(RemovalPolicy.DESTROY)
 				.build();
 
