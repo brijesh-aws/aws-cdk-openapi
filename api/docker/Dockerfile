@@ -1,3 +1,4 @@
+# Few updates made
 FROM ruby:2.6.5-alpine
 RUN apk update && apk upgrade --no-cache
 RUN apk add --no-cache git build-base curl
